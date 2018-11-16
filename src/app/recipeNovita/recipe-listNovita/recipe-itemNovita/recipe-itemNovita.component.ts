@@ -10,15 +10,16 @@ import { RecipeNovitaService } from '../../recipeNovita.service';
 export class RecipeItemNovitaComponent implements OnInit {
 
   @Input() recipe:Recipe;
-  //@Output() recipeSelected=new EventEmitter<void>();
+  @Input() index:number;
+  // @Output() recipeSelected=new EventEmitter<void>();
 
-  constructor(private recipeNovitaService:RecipeNovitaService) { }
+ // constructor(private recipeNovitaService:RecipeNovitaService) { }
 
   ngOnInit() {
   }
 
-  onSelected(){
-    // this.recipeSelected.emit();
-    this.recipeNovitaService.recipeSelected.emit(this.recipe);
-  }
+  // onSelected(){
+  //  //this.recipeSelected.emit();
+  //  this.recipeNovitaService.recipeNovitaSelected.emit(this.recipe);
+  // }
 }

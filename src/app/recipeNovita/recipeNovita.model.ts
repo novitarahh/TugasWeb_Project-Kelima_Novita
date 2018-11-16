@@ -1,5 +1,4 @@
 import { Ingredient } from '../sharedNovita/ingredientNovita.model';
-
 export class Recipe{
     public name:string;
     public description:string;

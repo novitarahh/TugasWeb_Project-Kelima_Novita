@@ -6,15 +6,15 @@ import { RecipeNovitaService } from './recipeNovita.service';
   selector: 'app-recipeNovita',
   templateUrl: './recipeNovita.component.html',
   styleUrls: ['./recipeNovita.component.css'],
-  providers:[RecipeNovitaService],
+  providers: [RecipeNovitaService],
 })
 export class RecipeNovitaComponent implements OnInit {
   selectedRecipe:Recipe;
   
-  constructor(private recipeNovitaService: RecipeNovitaService) { }
+  constructor(private recipeNovitaService:RecipeNovitaService) { }
 
   ngOnInit() {
-    this.recipeNovitaService.recipeSelected
+    this.recipeNovitaService.recipeNovitaSelected
     .subscribe(
       (recipe:Recipe)=>{
         this.selectedRecipe=recipe;

@@ -7,7 +7,7 @@ import { ShoppingListNovitaService } from '../shopping-listNovita/shopping-listN
 @Injectable()
 export class RecipeNovitaService {
 
-  recipeNovitaaSelected = new EventEmitter<Recipe>();
+  recipeNovitaSelected = new EventEmitter<Recipe>();
 
   recipes:Recipe[]=[
     new Recipe('Burger',
@@ -34,6 +34,11 @@ export class RecipeNovitaService {
   addIngredientsShoppingList(ingredients: Ingredient[]){
     this.slsService.addIngredients(ingredients);
   }
-constructor(private slsService: ShoppingListNovitaService) { }
+
+  getRecipe(index:number){
+    return this.recipes[index];
+  }
+
+  constructor(private slsService: ShoppingListNovitaService) { }
 
 }

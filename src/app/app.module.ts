@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderNovitaComponent } from './headerNovita/headerNovita.component';
@@ -11,6 +14,8 @@ import { RecipeItemNovitaComponent } from './recipeNovita/recipe-listNovita/reci
 import { ShoppingEditNovitaComponent } from './shopping-listNovita/shopping-editNovita/shopping-editNovita.component';
 import { DropdownNovitaDirective } from './sharedNovita/dropdownNovita.directive';
 import { ShoppingListNovitaService } from './shopping-listNovita/shopping-listNovita.service';
+import { RecipeStartNovitaComponent } from './recipeNovita/recipe-startNovita/recipe-startNovita.component';
+import { RecipeEditNovitaComponent } from './recipeNovita/recipe-editNovita/recipe-editNovita.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +27,15 @@ import { ShoppingListNovitaService } from './shopping-listNovita/shopping-listNo
     RecipeDetailNovitaComponent,
     RecipeItemNovitaComponent,
     ShoppingEditNovitaComponent,
-    DropdownNovitaDirective
+    DropdownNovitaDirective,
+    RecipeStartNovitaComponent,
+    RecipeEditNovitaComponent
 ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListNovitaService],
   bootstrap: [AppComponent]

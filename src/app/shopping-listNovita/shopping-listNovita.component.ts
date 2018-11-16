@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../sharedNovita/ingredientNovita.model';
-import { ShoppingListNovitaService } from '../shopping-listNovita/shopping-listNovita.Service';
+import { ShoppingListNovitaService } from '../shopping-listNovita/shopping-listNovita.service';
 
 @Component({
   selector: 'app-shopping-listNovita',
@@ -11,9 +11,9 @@ export class ShoppingListNovitaComponent implements OnInit {
 
   ingredients:Ingredient[]
   //=[
-  //  new Ingredient('Apples',23),
-  //  new Ingredient('Tomato',10),
-  // ];
+    //new Ingredient('Apples',23),
+    //new Ingredient('Tomato',10),
+  //];
 
   constructor(private slsService:ShoppingListNovitaService) { }
 
@@ -26,8 +26,9 @@ export class ShoppingListNovitaComponent implements OnInit {
       }
     )
   }
- // onIngredientAdded(ingredient:Ingredient)
- // {
- // this.ingredients.push(ingredient);
- // }
+
+  //onIngredientAdded(ingredient:Ingredient)
+  //{
+  //this.ingredients.push(ingredient);
+//}
 }
